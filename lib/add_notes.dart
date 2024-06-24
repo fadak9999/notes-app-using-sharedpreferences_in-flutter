@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:notes_app_flutter/model.dart';
-//import 'package:notes_app_flutter/notes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class add_notes extends StatefulWidget {

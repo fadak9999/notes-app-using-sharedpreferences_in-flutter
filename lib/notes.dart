@@ -52,7 +52,33 @@ class _notesState extends State<notes> {
               });
             }
           }),
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Color.fromARGB(255, 215, 213, 213),
+        child: Container(
+          margin: EdgeInsets.only(top: 10, right: 200),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+              Divider(
+                height: 100,
+                color: Color.fromARGB(255, 255, 191, 0),
+              ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.person_rounded)),
+              Divider(
+                height: 100,
+                color: Color.fromARGB(255, 255, 191, 0),
+              ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.help)),
+              Divider(
+                height: 100,
+                color: Color.fromARGB(255, 255, 191, 0),
+              ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+            ],
+          ),
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 251, 230, 166),
         centerTitle: true,
