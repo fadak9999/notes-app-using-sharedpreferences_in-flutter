@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:notes_app_flutter/model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,7 +44,7 @@ class _add_notesState extends State<add_notes> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 238, 225, 142),
         centerTitle: true,
-        title: Text("Add Notes"),
+        title: Text("addnotes".tr),
       ),
       body: ListView(
         children: [
@@ -68,7 +69,7 @@ class _add_notesState extends State<add_notes> {
                   maxLines: 1,
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   decoration: InputDecoration(
-                      hintText: 'Title', border: InputBorder.none),
+                      hintText: 'title'.tr, border: InputBorder.none),
                 ),
                 //--
                 TextField(
@@ -77,7 +78,7 @@ class _add_notesState extends State<add_notes> {
                   //
                   maxLines: 5,
                   decoration: InputDecoration(
-                      hintText: 'Description', border: InputBorder.none),
+                      hintText: 'Description'.tr, border: InputBorder.none),
                 ),
               ],
             ),
@@ -90,7 +91,7 @@ class _add_notesState extends State<add_notes> {
               List<String> stringList =
                   list.map((item) => json.encode(item.toMap())).toList();
               sharedPreferences.setStringList("list", stringList);
-              // Navigator.pushNamed(context, 'notes');
+
               Navigator.pop(context, "loadData");
             },
             child: Container(
@@ -102,7 +103,7 @@ class _add_notesState extends State<add_notes> {
                   borderRadius: BorderRadius.circular(10)),
               child: Center(
                   child: Text(
-                "Save",
+                "save".tr,
                 style: TextStyle(
                     color: Color.fromARGB(255, 121, 119, 112), fontSize: 18),
               )),

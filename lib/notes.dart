@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:notes_app_flutter/add_notes.dart';
 import 'package:notes_app_flutter/model.dart';
+import 'package:notes_app_flutter/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class notes extends StatefulWidget {
@@ -59,7 +61,14 @@ class _notesState extends State<notes> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+              IconButton(
+                  onPressed: () {
+//
+                    Get.to(settings());
+
+//
+                  },
+                  icon: Icon(Icons.settings)),
               Divider(
                 height: 100,
                 color: Color.fromARGB(255, 255, 191, 0),
@@ -82,7 +91,7 @@ class _notesState extends State<notes> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 251, 230, 166),
         centerTitle: true,
-        title: Text("Notes"),
+        title: Text("notes".tr),
       ),
 //
       body: list.isEmpty
